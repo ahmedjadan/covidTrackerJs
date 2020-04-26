@@ -55,3 +55,19 @@ thead {
     background-color: #c42323dc;
     color: #eee;
 }
+
+@media screen and (max-width: 640px){
+    th, thead {
+        font-size: 1rem !important;
+    }
+    
+    .stickyHead th{
+        background: none !important;
+        position: initial !important;
+    }
+    tr, td {
+        font-size: 1.4rem !important;
+        padding: 6px 22px !important;
+        height: fit-content !important;
+    }
+}
