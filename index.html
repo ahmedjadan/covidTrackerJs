@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<header>
+    <style>
+       td, th {
+           padding: 8px 0 !important;
+           font-size: 1.5rem !important;
+           border-radius: 0;
+           text-align: center;
+       }
+       th{
+           font-size: 1.3rem !important;
+           padding: 10px 10px !important;
+
+       }
+      
+       thead {
+           background-color: #e7e8ec  !important;
+           color: rgb(56, 54, 54) ;
+       }
+       .thehead {
+           background-color: #c8c9d1 !important;
+           color: #18181a ;
+       }
+       .thehead:hover{
+        background-color: #b6b7bd !important;
+
+       }
+       .deaths {
+           background-color: #c42323b7;
+           text-align: left;
+           color: #eee;
+           padding: 0 5px !important;
+
+       }
+       .recovered {
+           background-color: #278024c2;
+           text-align: left;
+           color: #eee;
+           padding: 0 5px !important;
+       }
+       .country {
+           word-wrap: wrap;
+           text-align:  left;
+           width: min-content !important;
+       }
+    </style>
+</header>
+<body>
+    <div class="container">
+        <h1>Async Js</h1>
+
+        <div class="row">
+            <div class="col s12">
+                <table class="table responsive-table ">
+                    <thead class="thehead">
+                        <tr>
+                            <th>Confirmed cases</th>
+                            <th> Today Cases</th>
+                            <th> Deaths</th>
+                            <th>Today Deaths</th>
+                            <th>Recovered</th>
+                            <th>Active</th>
+                            <th>Critical</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="cases"></td>
+                            <td id="todayCases"></td>
+                            <td id="deaths"></td>
+                            <td id="todayDeaths"></td>
+                            <td id="recovered"></td>
+                            <td id="active"></td>
+                            <td id="critical"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      
+ 
+            <div class="col s12">
+                <div class="input-field col s6">
+                    <input placeholder="search" onkeyup="filterSearch()" id="searchForm" type="text" class="validate">
+                  </div>
+            </div>
+    
+        <div class="row">
+            <div class="col s12">
+                <table class="table sortable-table   responsive-table striped "id="table_1" >
+                    <thead>
+                        <tr>
+                            <th class="country" onclick="sortTable(0)">Country</th>
+                            <th > Cases</th>
+                            <th>New Cases</th>
+                            <th> Deaths</th>
+                            <th>New Deaths</th>
+                            <th>Recovered</th>
+                            <th>Tests</th>
+                            <th>Critical</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="dataSet">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <ul id="country">
+
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
