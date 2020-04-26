@@ -8,58 +8,13 @@
     <title>Covid-19 Tracker</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-<header>
-    <style>
-       td, th {
-           padding: 8px 0 !important;
-           font-size: 1.5rem !important;
-           border-radius: 0;
-           text-align: center;
-       }
-       th{
-           font-size: 1.3rem !important;
-           padding: 10px 10px !important;
-
-       }
-      
-       thead {
-           background-color: #e7e8ec  !important;
-           color: rgb(56, 54, 54) ;
-       }
-       .thehead {
-           background-color: #c8c9d1 !important;
-           color: #18181a ;
-       }
-       .thehead:hover{
-        background-color: #b6b7bd !important;
-
-       }
-       .deaths {
-           background-color: #c42323b7;
-           text-align: left;
-           color: #eee;
-           padding: 0 5px !important;
-
-       }
-       .recovered {
-           background-color: #278024c2;
-           text-align: left;
-           color: #eee;
-           padding: 0 5px !important;
-       }
-       .country {
-           word-wrap: wrap;
-           text-align:  left;
-           width: min-content !important;
-       }
-    </style>
-</header>
 <body>
     <div class="container">
-        <h3 class="center grey-text">Corona Virus - Covid-19 Tracker</h3>
+        <h3 class="center grey-text">Coronavirus - Covid-19 Tracker</h3>
 
         <div class="row">
             <div class="col s12">
@@ -99,7 +54,7 @@
     
         <div class="row">
             <div class="col s12">
-                <table class="table sortable-table   responsive-table striped "id="table_1" >
+                <table class="table sortable-table stickyHead   responsive-table striped "id="table_1" >
                     <thead>
                         <tr>
                             <th class="country">Country</th>

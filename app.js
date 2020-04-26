@@ -52,7 +52,7 @@ fetch(API_2).then(( response ) => {
                 countryLists += "<td>" + country.cases.toLocaleString() + "</td>";
                 countryLists += "<td>" + country.todayCases.toLocaleString() + "</td>";
                 countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
-                countryLists += "<td>" + country.todayDeaths.toLocaleString() + "</td>";
+                countryLists += `<td class="newDeaths">` + country.todayDeaths.toLocaleString() + "</td>";
                 countryLists += `<td class="recovered">` + country.recovered.toLocaleString() + "</td>";
                 countryLists += "<td>" + country.tests.toLocaleString() + "</td>";
                 countryLists += "<td>" + country.critical.toLocaleString() + "</td> </tr>" ;
@@ -85,6 +85,21 @@ function filterSearch() {
       }
     }
   }
+
+const stickyHead = document.getElementById('stickyHead');
+
+
+  // window.onscroll = () => {
+  //   if(window.pageXOffset > 100){
+  //     stickyHead.style.position = 'fixed';
+  //     stickyHead.style.top = 0;
+  //   } else{
+  //     stickyHead.style.position = ''
+  //   }
+   
+  // }
+
+
 
 
   //  sortTable = (n) => {

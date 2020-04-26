@@ -1,0 +1,52 @@
+.stickyHead th {
+    position: sticky !important;
+    top: -1px;
+    background-color: #444;
+    
+
+}
+td, th {
+    padding: 4px 0 !important;
+    font-size: 1.5rem !important;
+    border-radius: 0;
+    text-align: center;
+}
+td,th {
+    border: 1px dotted rgba(201, 198, 198, 0.7) !important;
+}
+th{
+    font-size: 1.3rem !important;
+    padding: 10px 10px !important;
+
+}
+
+thead {
+    background-color: #5d5d5e  !important;
+    color: rgb(238, 232, 232) ;
+}
+.thehead {
+    background-color: #c8c9d1 !important;
+    color: #18181a ;
+}
+.thehead:hover{
+ background-color: #b6b7bd !important;
+
+}
+.deaths {
+    background-color: #c42323b7;
+    color: #eee;
+
+}
+.recovered {
+    background-color: #278024c2;
+    color: #eee;
+}
+.country {
+    word-wrap: wrap;
+    text-align:  left;
+    width: min-content !important;
+}
+.newDeaths {
+    background-color: #c42323dc;
+    color: #eee;
+}
