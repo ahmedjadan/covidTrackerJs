@@ -1,3 +1,8 @@
+::selection {
+    background-color: rgba(240, 204, 46, 0.733);
+    color: #353434;
+}
+
 .stickyHead th {
     position: sticky !important;
     top: -1px;
