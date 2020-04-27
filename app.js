@@ -89,22 +89,6 @@ function filterSearch() {
     }
   }
 
-const stickyHead = document.getElementById('stickyHead');
-
-
-  // window.onscroll = () => {
-  //   if(window.pageXOffset > 100){
-  //     stickyHead.style.position = 'fixed';
-  //     stickyHead.style.top = 0;
-  //   } else{
-  //     stickyHead.style.position = ''
-  //   }
-   
-  // }
-
-
-
-
   //  sortTable = (n) => {
   //   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   //   table = document.getElementById("table_1");
