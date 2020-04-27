@@ -3,68 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تابع احصاءات الاصابة بفيروس كورونا حول العالم ">
+  <meta name="keywords" content="covid, covid19, كورونا, فيروس, فيروس كورونا , بالعربي, ">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
 
-    <title>Covid-19 Tracker</title>
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
+    <title>Covid-19 Tracker</title>
 
 </head>
 
 <body>
     <div class="container">
-        <h3 class="center grey-text">Coronavirus - Covid-19 Tracker</h3>
-
+        <h3 class="center grey-text">فيروس كورونا المستجد - كوفيد-19</h3>
         <div class="row">
-            <div class="col s12">
-                <table class="table responsive-table ">
-                    <thead class="thehead">
-                        <tr>
-                            <th>Confirmed cases</th>
-                            <th> Today Cases</th>
-                            <th> Deaths</th>
-                            <th>Today Deaths</th>
-                            <th>Recovered</th>
-                            <th>Active</th>
-                            <th>Critical</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="cases"></td>
-                            <td id="todayCases"></td>
-                            <td id="deaths"></td>
-                            <td id="todayDeaths"></td>
-                            <td id="recovered"></td>
-                            <td id="active"></td>
-                            <td id="critical"></td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <div class="col s6 m4 l3 center line">    
+                <h4 class="grey h4"> وفاة</h4>
+                <h3 id="deaths" class="red-text h3"></h3>
             </div>
+            <div class="col s6 m4 l3 center line">    
+                <h4 class="grey h4"> تعافي</h4>
+                <h3 id="recovered" class="green-text h3"></h3>
+            </div>
+            <div class="col s6 m4 l3 center line" >
+                <h4 class="grey h4"> جديدة  </h4>
+                 <h3 id="todayCases" class="indigo-text h3"></h3>
+            </div>
+            <div class="col s6 m4 l3 center line">
+                <h4 class="center grey h4"> مؤكدة</h4>
+                <h3 id="cases" class="grey-text h3"></h3>
+            </div>   
+          
         </div>
-      
- 
+   <br> <br>
             <div class="col s12">
                 <div class="input-field col s6">
-                    <input placeholder="search" onkeyup="filterSearch()" id="searchForm" type="text" class="validate">
+                    <input placeholder="ابحث باسم الدولة" onkeyup="filterSearch()" id="searchForm" type="text" class="validate right">
                   </div>
             </div>
+            <br>
     
         <div class="row">
             <div class="col s12">
                 <table class="table sortable-table stickyHead   responsive-table striped "id="table_1" >
                     <thead>
                         <tr>
-                            <th class="country">Country</th>
-                            <th > Cases</th>
-                            <th>New Cases</th>
-                            <th> Deaths</th>
-                            <th>New Deaths</th>
-                            <th>Recovered</th>
-                            <th>Tests</th>
-                            <th>Critical</th>
+                            <th class="country">الدولة</th>
+                            <th > مؤكدة</th>
+                            <th>جديدة</th>
+                            <th> وفيات</th>
+                            <th>وفيات جديدة</th>
+                            <th>تعافي</th>
+                            <th>حرجة</th>
+                            <th>فحوصات</th>
+
 
                         </tr>
                     </thead>
@@ -74,10 +70,24 @@
                 </table>
             </div>
         </div>
-        <ul id="country">
-
-        </ul>
+       
     </div>
+    <footer class="page-footer grey lighten-2">
+        <div class="container">
+            <div class="row">
+           
+                <div class="col s12 l12  center ">
+                    <h1 class=" grey-text text-darken-3">إحم نفسك وعائلتك</h1>
+                    <h4 class="grey-text text-darken-2 ">ساهم في وقف انتشار فيروس كورونا</h4>
+                    <code class="grey-text text-darken-2 "> يتم تحديث البيانات أعلاه آليا عبر عدة مصادر موثوقة</code>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright grey lighten-1 col s12 l12">
+            <div class="container center-align"> <a href="https://twitter.com/ahmedjadan" target="_blank" class="center grey-text text-darken-3">By: Ahmed </a>    </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -30,15 +30,15 @@ getCovidData()
         document.getElementById('deaths').innerHTML = deaths.toLocaleString();
         document.getElementById('recovered').innerHTML = recovered.toLocaleString();
         document.getElementById('todayCases').innerHTML = todayCases.toLocaleString();
-        document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString();
-        document.getElementById('critical').innerHTML = critical.toLocaleString();
-        document.getElementById('active').innerHTML = active.toLocaleString();
+        // document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString();
+        // document.getElementById('critical').innerHTML = critical.toLocaleString();
+        // document.getElementById('active').innerHTML = active.toLocaleString();
 
     })
 
     .catch(err => console.log('rejected', err.message))
 
-
+    // 
     // get countries list
 
 fetch(API_2).then(( response ) => {
@@ -54,8 +54,8 @@ fetch(API_2).then(( response ) => {
                 countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
                 countryLists += `<td class="newDeaths">` + country.todayDeaths.toLocaleString() + "</td>";
                 countryLists += `<td class="recovered">` + country.recovered.toLocaleString() + "</td>";
-                countryLists += "<td>" + country.tests.toLocaleString() + "</td>";
-                countryLists += "<td>" + country.critical.toLocaleString() + "</td> </tr>" ;
+                countryLists += "<td>" + country.critical.toLocaleString()+ "</td>";
+                countryLists += "<td>" + country.tests.toLocaleString() + "</td> </tr>" ;
             })
             document.getElementById('dataSet').innerHTML = countryLists;
         } 

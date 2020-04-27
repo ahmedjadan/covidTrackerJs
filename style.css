@@ -1,3 +1,8 @@
+body {
+    font-family: 'Almarai', sans-serif;
+
+}
+
 ::selection {
     background-color: rgba(240, 204, 46, 0.733);
     color: #353434;
@@ -69,5 +74,37 @@ thead {
         font-size: 1.4rem !important;
         padding: 6px 22px !important;
         height: fit-content !important;
+    }
+}
+/* h4,h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+} */
+
+.h4{
+    padding: 10px 0 ;
+    color: #eee !important;
+}
+.line {
+    border-right: 1px solid rgba(165, 160, 160, 0.692);
+}
+.line:last-child {
+    border-right: none;
+}
+
+input {
+    text-align: center;
+    background-color: #eee !important;
+}
+@media screen and (max-width: 640px) {
+    .line {
+        border-right: none;
+       
+    }
+    .h3 {
+        border-bottom: 1px dotted rgba(165, 160, 160, 0.692);
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 4px 0;
     }
 }
