@@ -24,7 +24,7 @@ getCovidData()
         // let critical = data.critical;
         // let active = data.active;
 
-        const {cases, deaths, recovered, todayCases, todayDeaths, critical, active} = data;
+        const {cases, deaths, recovered, todayCases, todayDeaths, critical, active, updated} = data;
 
         document.getElementById('cases').innerHTML = cases.toLocaleString();
         document.getElementById('deaths').innerHTML = deaths.toLocaleString();
@@ -33,7 +33,10 @@ getCovidData()
         // document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString();
         // document.getElementById('critical').innerHTML = critical.toLocaleString();
         // document.getElementById('active').innerHTML = active.toLocaleString();
+      const date = new Date(parseInt(updated));
+      const lastUpdated = date.toLocaleTimeString('ar-YE');
 
+            document.getElementById('lastUpdated').innerHTML = lastUpdated;
     })
 
     .catch(err => console.log('rejected', err.message))

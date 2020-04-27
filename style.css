@@ -7,7 +7,9 @@ body {
     background-color: rgba(240, 204, 46, 0.733);
     color: #353434;
 }
-
+.title {
+    color: #444442 !important;
+}
 .stickyHead th {
     position: sticky !important;
     top: -1px;
@@ -107,4 +109,14 @@ input {
         font-weight: bold;
         padding: 4px 0;
     }
+}
+
+@media screen and (max-width: 992px) {
+    .swap {
+        display: initial !important;
+    }
+}
+
+.swap {
+    display: none;
 }

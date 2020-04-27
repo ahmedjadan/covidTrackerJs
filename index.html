@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        <h3 class="center grey-text">فيروس كورونا المستجد - كوفيد-19</h3>
+        <h3 class="center grey-text title">فيروس كورونا المستجد - كوفيد-19</h3>
         <div class="row">
 
             <div class="col s6 m4 l3 center line">    
@@ -45,11 +45,16 @@
                     <input placeholder="ابحث باسم الدولة" onkeyup="filterSearch()" id="searchForm" type="text" class="validate right">
                   </div>
             </div>
-            <br>
+            <div class="row">
+                <div class="col s12 center">
+                    <span class=" grey-text">آخر تحديث للبيانات: </span>
+                    <span id="lastUpdated" class=" grey-text"></span>
+                </div>
+            </div>
     
         <div class="row">
             <div class="col s12">
-                <table class="table sortable-table stickyHead   responsive-table striped "id="table_1" >
+                <table class="table sortable-table stickyHead  responsive-table   striped "id="table_1" >
                     <thead>
                         <tr>
                             <th class="country">الدولة</th>
@@ -69,6 +74,11 @@
                     </tbody>
                 </table>
             </div>
+            <div class="col s12 center swap">
+                <span class="center grey-text">اسحب لعرض الجدول <i class="material-icons small right">swap_horiz</i></span>
+
+            </div>
+
         </div>
        
     </div>
