@@ -47,11 +47,15 @@ thead {
 .deaths {
     background-color: #c42323b7;
     color: #eee;
+    padding: 3px 9px !important;
+
 
 }
 .recovered {
     background-color: #278024c2;
     color: #eee;
+    padding: 3px 9px !important;
+
 }
 .country {
     word-wrap: wrap;
@@ -62,21 +66,36 @@ thead {
     background-color: #c42323dc;
     color: #eee;
 }
+td.newcases {
+    padding: 3px 9px !important;
+
+}
+td{
+    padding: 9px 9px !important;
+
+
+}
+
+td.cases {
+    width: max-content !important;
+    padding: 3px 9px !important;
+}
 
 @media screen and (max-width: 640px){
-    th, thead {
-        font-size: 1rem !important;
-    }
+   
     
     .stickyHead th{
         background: none !important;
         position: initial !important;
     }
-    tr, td {
-        font-size: 1.4rem !important;
-        padding: 6px 22px !important;
+     td {
+        font-size: 1.8rem !important;
+        padding: 15px 22px !important;
         height: fit-content !important;
+        margin-top: 2px !important;
     }
+   
+
 }
 /* h4,h3 {
     margin: 0 !important;
@@ -109,11 +128,19 @@ input {
         font-weight: bold;
         padding: 4px 0;
     }
+    
 }
 
 @media screen and (max-width: 992px) {
     .swap {
         display: initial !important;
+    }
+  
+    td {
+        padding: 10px 22px !important;
+        height: fit-content !important;
+        margin-top: 3px !important;
+        font-size: 1.5rem !important;
     }
 }
 

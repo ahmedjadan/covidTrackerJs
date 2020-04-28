@@ -16,13 +16,6 @@ const getCovidData = async () => {
 };
 getCovidData()
     .then((data) => {
-        // let confirmed = data.cases;
-        // let deaths = data.deaths;
-        // let recovered = data.recovered;
-        // let todayCases = data.todayCases;
-        // let todayDeaths = data.todayDeaths;
-        // let critical = data.critical;
-        // let active = data.active;
 
         const {cases, deaths, recovered, todayCases, todayDeaths, critical, active, updated} = data;
 
@@ -30,9 +23,7 @@ getCovidData()
         document.getElementById('deaths').innerHTML = deaths.toLocaleString();
         document.getElementById('recovered').innerHTML = recovered.toLocaleString();
         document.getElementById('todayCases').innerHTML = todayCases.toLocaleString();
-        // document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString();
-        // document.getElementById('critical').innerHTML = critical.toLocaleString();
-        // document.getElementById('active').innerHTML = active.toLocaleString();
+        
       const date = new Date(parseInt(updated));
       const lastUpdated = date.toLocaleTimeString('ar-YE');
 
@@ -41,7 +32,6 @@ getCovidData()
 
     .catch(err => console.log('rejected', err.message))
 
-    // 
     // get countries list
 
 fetch(API_2).then(( response ) => {
@@ -49,11 +39,22 @@ fetch(API_2).then(( response ) => {
         // console.log(data)
         if(data.length > 0){
             let countryLists = '';
+            data.sort((a, b) => {
+              if(a.cases > b.cases){
+                return -1;
+              } else if (b.cases > a.cases){
+                return 1;
+              } else {
+                return 0;
+              }
+            });
+
             data.forEach((country) => {
+              
                 countryLists += "<tr>";
                 countryLists += `<td class="country">` + country.country + "</td>";
-                countryLists += "<td>" + country.cases.toLocaleString() + "</td>";
-                countryLists += "<td>" + country.todayCases.toLocaleString() + "</td>";
+                countryLists += `<td class="cases">` + country.cases.toLocaleString() + "</td>";
+                countryLists += `<td class="newcases">` + country.todayCases.toLocaleString() + "</td>";
                 countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
                 countryLists += `<td class="newDeaths">` + country.todayDeaths.toLocaleString() + "</td>";
                 countryLists += `<td class="recovered">` + country.recovered.toLocaleString() + "</td>";
@@ -61,8 +62,10 @@ fetch(API_2).then(( response ) => {
                 countryLists += "<td>" + country.tests.toLocaleString() + "</td> </tr>" ;
             })
             document.getElementById('dataSet').innerHTML = countryLists;
+            
         } 
     })
+
 }).catch(err => console.log('rejected', err.message))
 
 //fillter search
@@ -88,46 +91,3 @@ function filterSearch() {
       }
     }
   }
-
-  //  sortTable = (n) => {
-  //   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  //   table = document.getElementById("table_1");
-  //   switching = true;
-  //   dir = "asc";
-   
-  //   while (switching) {
-  //     switching = false;
-  //     rows = table.rows;
-     
-  //     for (i = 1; i < (rows.length - 1); i++) {
-  //       shouldSwitch = false;
-       
-  //       x = rows[i].getElementsByTagName("td")[n];
-  //       y = rows[i + 1].getElementsByTagName("td")[n];
-      
-  //       if (dir == "asc") {
-  //         if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-  //           shouldSwitch = true;
-  //           break;
-  //         }
-  //       } else if (dir == "desc") {
-  //         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-  //           shouldSwitch = true;
-  //           break;
-  //         }
-  //       }
-  //     }
-  //     if (shouldSwitch) {
-       
-  //       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-  //       switching = true;
-  //       switchcount ++;
-  //     } else {
-        
-  //       if (switchcount == 0 && dir == "asc") {
-  //         dir = "desc";
-  //         switching = true;
-  //       }
-  //     }
-  //   }
-  // }
