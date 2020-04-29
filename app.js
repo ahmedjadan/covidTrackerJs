@@ -45,19 +45,10 @@ fetch(API_2).then(( response ) => {
         if(data.length > 0){
 
             let countryLists = '';
-
-            data.sort((a, b) => {
-              if(a.cases > b.cases){
-                return -1;
-              } else if (b.cases > a.cases){
-                return 1;
-              } else {
-                return 0;
-              }
-            });
+            //sorting data based on the high values
+            data.sort( (a, b) => b.cases - a.cases)
 
             data.forEach((country) => {
-              
                 countryLists += "<tr>";
                 countryLists += `<td class="country">` + country.country + "</td>";
                 countryLists += `<td class="cases">` + country.cases.toLocaleString() + "</td>";
