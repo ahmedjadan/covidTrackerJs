@@ -56,8 +56,8 @@ fetch(API_2).then(( response ) => {
                 countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
                 countryLists += `<td class="newDeaths">` + country.todayDeaths.toLocaleString() + "</td>";
                 countryLists += `<td class="recovered">` + country.recovered.toLocaleString() + "</td>";
-                countryLists += "<td>" + country.critical.toLocaleString()+ "</td>";
-                countryLists += "<td>" + country.tests.toLocaleString() + "</td> </tr>" ;
+                countryLists += `<td class="critical">` + country.critical.toLocaleString()+ "</td>";
+                countryLists += `<td class="tests">` + country.tests.toLocaleString() + "</td> </tr>" ;
             })
             document.getElementById('dataSet').innerHTML = countryLists;
             

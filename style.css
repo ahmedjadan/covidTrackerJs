@@ -17,7 +17,7 @@ body {
     
 
 }
-td, th {
+ th {
     padding: 4px 0 !important;
     font-size: 1.5rem !important;
     border-radius: 0;
@@ -33,7 +33,7 @@ th{
 }
 
 thead {
-    background-color: #5d5d5e  !important;
+    background-color: #4b4b4d  !important;
     color: rgb(238, 232, 232) ;
 }
 .thehead {
@@ -44,17 +44,15 @@ thead {
  background-color: #b6b7bd !important;
 
 }
-.deaths {
-    background-color: #c42323b7;
-    color: #eee;
-    padding: 3px 9px !important;
 
-
+.deaths, .recovered, .newDeaths, .newcases, .cases, .country, .critical , .tests {
+    padding: 10px 10px !important;
+    font-size: 1.4rem !important;
 }
+
 .recovered {
     background-color: #278024c2;
     color: #eee;
-    padding: 3px 9px !important;
 
 }
 .country {
@@ -65,21 +63,15 @@ thead {
 .newDeaths {
     background-color: #c42323dc;
     color: #eee;
-}
-td.newcases {
-    padding: 3px 9px !important;
+    text-align: center;
 
 }
-td{
-    padding: 9px 9px !important;
+.newcases {
+    background: rgba(247, 230, 79, 0.664);
 
 
 }
 
-td.cases {
-    width: max-content !important;
-    padding: 3px 9px !important;
-}
 
 .h4{
     padding: 10px 0 ;
@@ -111,10 +103,7 @@ input {
         position: initial !important;
     }
      td {
-        font-size: 1.8rem !important;
-        padding: 15px 22px !important;
         height: fit-content !important;
-        margin-top: 2px !important;
     }
     .line {
         border-right: none;
@@ -141,10 +130,18 @@ input {
     }
   
     td {
-        padding: 10px 22px !important;
         height: fit-content !important;
         margin-top: 3px !important;
-        font-size: 1.5rem !important;
+    }
+    .country {
+        background-color: #4b4b4d !important;
+        color: #eee;
+        border:  none !important;
+        width: 100% !important;
+    }
+    .deaths, .recovered, .newDeaths, .newcases, .cases, .country, .critical , .tests {
+        padding: 8px 10px !important;
+        font-size: 1.3rem !important;
     }
 }
 
