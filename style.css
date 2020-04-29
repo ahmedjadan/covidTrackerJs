@@ -121,7 +121,9 @@ input {
 
 }
 
-
+#todayCases {
+    direction: rtl;
+}
 
 
 @media screen and (max-width: 992px) {

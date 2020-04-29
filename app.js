@@ -19,10 +19,10 @@ getCovidData()
 
         const {cases, deaths, recovered, todayCases, todayDeaths, critical, active, updated} = data;
 
-        document.getElementById('cases').innerHTML = cases.toLocaleString();
+        document.getElementById('cases').innerHTML = cases.toLocaleString() ;
         document.getElementById('deaths').innerHTML = deaths.toLocaleString();
         document.getElementById('recovered').innerHTML = recovered.toLocaleString();
-        document.getElementById('todayCases').innerHTML = todayCases.toLocaleString();
+        document.getElementById('todayCases').innerHTML = todayCases.toLocaleString() + "+";
 
 
           const date = new Date(parseInt(updated));
@@ -49,7 +49,7 @@ fetch(API_2).then(( response ) => {
             data.sort( (a, b) => b.cases - a.cases)
 
             data.forEach((country) => {
-                countryLists += "<tr>";
+                countryLists += `<tr>`;
                 countryLists += `<td class="country"> ` + country.country + "</td>";
                 countryLists += `<td class="cases"> ` + country.cases.toLocaleString() + "</td>";
                 countryLists += `<td class="newcases"> +` + country.todayCases.toLocaleString() + "</td>";
