@@ -23,22 +23,29 @@ getCovidData()
         document.getElementById('deaths').innerHTML = deaths.toLocaleString();
         document.getElementById('recovered').innerHTML = recovered.toLocaleString();
         document.getElementById('todayCases').innerHTML = todayCases.toLocaleString();
-        
-      const date = new Date(parseInt(updated));
-      const lastUpdated = date.toLocaleTimeString('ar-YE');
 
-            document.getElementById('lastUpdated').innerHTML = lastUpdated;
+
+          const date = new Date(parseInt(updated));
+          const lastUpdated = date.toLocaleTimeString('ar-YE');
+          document.getElementById('lastUpdated').innerHTML = lastUpdated;
+
+          const closedCases = deaths + recovered;
+          document.getElementById('deathPercentage').innerHTML = ((Number(deaths)/ Number(closedCases)) *100).toLocaleString('en', {minimumIntegerDigits: 2, maximumFractionDigits:2}) + '%';
+          document.getElementById('recoveredPercentage').innerHTML = ((Number(recovered)/ Number(closedCases)) *100).toLocaleString('en', {minimumIntegerDigits: 2, maximumFractionDigits:2}) + '%';
+
     })
 
     .catch(err => console.log('rejected', err.message))
 
-    // get countries list
+    // get countries list 
 
 fetch(API_2).then(( response ) => {
     response.json().then((data) => {
         // console.log(data)
         if(data.length > 0){
+
             let countryLists = '';
+
             data.sort((a, b) => {
               if(a.cases > b.cases){
                 return -1;

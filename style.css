@@ -81,27 +81,6 @@ td.cases {
     padding: 3px 9px !important;
 }
 
-@media screen and (max-width: 640px){
-   
-    
-    .stickyHead th{
-        background: none !important;
-        position: initial !important;
-    }
-     td {
-        font-size: 1.8rem !important;
-        padding: 15px 22px !important;
-        height: fit-content !important;
-        margin-top: 2px !important;
-    }
-   
-
-}
-/* h4,h3 {
-    margin: 0 !important;
-    padding: 0 !important;
-} */
-
 .h4{
     padding: 10px 0 ;
     color: #eee !important;
@@ -117,19 +96,44 @@ input {
     text-align: center;
     background-color: #eee !important;
 }
-@media screen and (max-width: 640px) {
+
+
+.swap {
+    display: none;
+}
+
+
+@media screen and (max-width: 640px){
+   
+    
+    .stickyHead th{
+        background: none !important;
+        position: initial !important;
+    }
+     td {
+        font-size: 1.8rem !important;
+        padding: 15px 22px !important;
+        height: fit-content !important;
+        margin-top: 2px !important;
+    }
     .line {
         border-right: none;
        
     }
     .h3 {
         border-bottom: 1px dotted rgba(165, 160, 160, 0.692);
-        font-size: 1.6rem;
-        font-weight: bold;
         padding: 4px 0;
     }
-    
+    h3 {
+        font-size: 1.6rem !important;
+        font-weight: 700;
+    }
+   
+
 }
+
+
+
 
 @media screen and (max-width: 992px) {
     .swap {
@@ -144,6 +148,3 @@ input {
     }
 }
 
-.swap {
-    display: none;
-}
