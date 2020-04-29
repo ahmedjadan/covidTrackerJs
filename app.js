@@ -50,11 +50,11 @@ fetch(API_2).then(( response ) => {
 
             data.forEach((country) => {
                 countryLists += "<tr>";
-                countryLists += `<td class="country">` + country.country + "</td>";
-                countryLists += `<td class="cases">` + country.cases.toLocaleString() + "</td>";
-                countryLists += `<td class="newcases">` + country.todayCases.toLocaleString() + "</td>";
+                countryLists += `<td class="country"> ` + country.country + "</td>";
+                countryLists += `<td class="cases"> ` + country.cases.toLocaleString() + "</td>";
+                countryLists += `<td class="newcases"> +` + country.todayCases.toLocaleString() + "</td>";
                 countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
-                countryLists += `<td class="newDeaths">` + country.todayDeaths.toLocaleString() + "</td>";
+                countryLists += `<td class="newDeaths"> +` + country.todayDeaths.toLocaleString() + "</td>";
                 countryLists += `<td class="recovered">` + country.recovered.toLocaleString() + "</td>";
                 countryLists += `<td class="critical">` + country.critical.toLocaleString()+ "</td>";
                 countryLists += `<td class="tests">` + country.tests.toLocaleString() + "</td> </tr>" ;
