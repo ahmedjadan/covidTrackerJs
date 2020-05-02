@@ -23,7 +23,7 @@ body, html {
 }
 
  th {
-    padding: 4px 0 !important;
+    padding: 9px 0 !important;
     font-size: 1.5rem !important;
     border-radius: 0;
     text-align: center;
@@ -37,7 +37,9 @@ td,th {
 thead {
     background-color: #504f4f;
     color: #eee;
+    padding: 9px 6px ;
 }
+
 
 
 
