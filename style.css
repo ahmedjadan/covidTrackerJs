@@ -1,5 +1,10 @@
-body {
+*{
+    box-sizing: border-box !important;
+}
+
+body, html {
     font-family: 'Almarai', sans-serif;
+    background: #eee;
 
 }
 
@@ -13,10 +18,11 @@ body {
 .stickyHead th {
     position: sticky !important;
     top: -1px;
-    background-color: #444;
-    
+    background-color: rgb(172, 168, 168);  
+    font-size: 1.3rem !important;
 
 }
+
  th {
     padding: 4px 0 !important;
     font-size: 1.5rem !important;
@@ -26,20 +32,9 @@ body {
 td,th {
     border: 1px dotted rgba(201, 198, 198, 0.7) !important;
 }
-th{
-    font-size: 1.3rem !important;
-    padding: 10px 10px !important;
 
-}
 
-thead {
-    background-color: #4b4b4d  !important;
-    color: rgb(238, 232, 232) ;
-}
-.thehead {
-    background-color: #c8c9d1 !important;
-    color: #18181a ;
-}
+
 .thehead:hover{
  background-color: #b6b7bd !important;
 
@@ -61,32 +56,29 @@ thead {
     width: min-content !important;
 }
 .newDeaths {
-    background-color: #c42323dc;
-    color: #eee;
+  
     text-align: center;
 
 }
-.newcases {
+.newDeathWithBackground {
+    background-color: #c42323dc;
+    color: #eee;
+}
+.newWithBackroung {
     background: rgba(247, 230, 79, 0.664);
 
-
 }
 
 
-.h4{
-    padding: 10px 0 ;
-    color: #eee !important;
-}
-.line {
-    border-right: 1px solid rgba(165, 160, 160, 0.692);
-}
-.line:last-child {
-    border-right: none;
-}
+
 
 input {
     text-align: center;
-    background-color: #eee !important;
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow:  none !important;
+    border: none !important;
+    font-family: 'Almarai', sans-serif;
+
 }
 
 
@@ -94,6 +86,22 @@ input {
     display: none;
 }
 
+#todayCases {
+    direction: rtl;
+}
+#yemenFlag img {
+    width: 55px ;
+}
+
+table {
+    background: #fff;
+}
+/* hr {
+    border: 0;
+    background-color: #eee;
+    border-bottom: 2px solid rgb(0, 117, 153);
+
+} */
 
 @media screen and (max-width: 640px){
    
@@ -105,14 +113,7 @@ input {
      td {
         height: fit-content !important;
     }
-    .line {
-        border-right: none;
-       
-    }
-    .h3 {
-        border-bottom: 1px dotted rgba(165, 160, 160, 0.692);
-        padding: 4px 0;
-    }
+   
     h3 {
         font-size: 1.6rem !important;
         font-weight: 700;
@@ -121,9 +122,6 @@ input {
 
 }
 
-#todayCases {
-    direction: rtl;
-}
 
 
 @media screen and (max-width: 992px) {

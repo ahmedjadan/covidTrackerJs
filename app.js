@@ -1,6 +1,34 @@
 const API_1 = 'https://corona.lmao.ninja/v2/all/';
 const API_2 = 'https://corona.lmao.ninja/v2/countries/';
+const YE_API = 'https://corona.lmao.ninja/v2/countries/ye';
 
+
+
+const yemenData = async () => {
+  const response = await fetch(YE_API);
+  const data = await response.json();
+  return data;
+}
+yemenData().then((data) => {
+  const { cases, todayDeaths, todayCases, recovered, deaths, active, critical, tests, countryInfo } = data;
+  
+  
+  // let img = document.createElement('img');
+  // img.src = countryInfo.flag;
+  // document.getElementById('yemenFlag').append(img);
+
+  document.getElementById('cases_Y').innerHTML = cases.toLocaleString();
+  document.getElementById('newCases_Y').innerHTML = todayCases + " +";
+  document.getElementById('recovered_Y').innerHTML = recovered;
+  document.getElementById('totalDeaths_Y').innerHTML = deaths;
+  // document.getElementById('tests').innerHTML = tests.toLocaleString();
+
+  const closedCases = deaths + recovered;
+  document.getElementById('recoveredPercentageYemen').innerHTML = ((Number(recovered)/ Number(closedCases)) *100).toLocaleString('en', {minimumIntegerDigits: 2, maximumFractionDigits:2}) + '%';
+  document.getElementById('deathPercentageYemen').innerHTML = ((Number(deaths)/ Number(closedCases)) *100).toLocaleString('en', {minimumIntegerDigits: 2, maximumFractionDigits:2}) + '%';
+
+
+})
 
 
 
@@ -23,6 +51,7 @@ getCovidData()
         document.getElementById('deaths').innerHTML = deaths.toLocaleString();
         document.getElementById('recovered').innerHTML = recovered.toLocaleString();
         document.getElementById('todayCases').innerHTML = todayCases.toLocaleString() + "+";
+        document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString() + "+";
 
 
           const date = new Date(parseInt(updated));
@@ -52,19 +81,29 @@ fetch(API_2).then(( response ) => {
                 countryLists += `<tr>`;
                 countryLists += `<td class="country"> ` + country.country + "</td>";
                 countryLists += `<td class="cases"> ` + country.cases.toLocaleString() + "</td>";
-                countryLists += `<td class="newcases"> +` + country.todayCases.toLocaleString() + "</td>";
-                countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
-                countryLists += `<td class="newDeaths"> +` + country.todayDeaths.toLocaleString() + "</td>";
+              if(country.todayCases){
+                countryLists += `<td class="newcases newWithBackroung"> +` + country.todayCases.toLocaleString() + "</td>";
+              }else {
+                countryLists += `<td class="newcases"> ` + country.todayCases.toLocaleString() + "</td>";
+              }
+
+              countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
+
+                if(country.todayDeaths){
+                  countryLists += `<td class="newDeaths newDeathWithBackground"> +` + country.todayDeaths.toLocaleString() + "</td>";
+                } else {
+                  countryLists += `<td class="newDeaths"> ` + country.todayDeaths.toLocaleString() + "</td>";
+                }
                 countryLists += `<td class="recovered">` + country.recovered.toLocaleString() + "</td>";
                 countryLists += `<td class="critical">` + country.critical.toLocaleString()+ "</td>";
                 countryLists += `<td class="tests">` + country.tests.toLocaleString() + "</td> </tr>" ;
             })
-            document.getElementById('dataSet').innerHTML = countryLists;
-            
+            document.getElementById('dataSet').innerHTML = countryLists;           
         } 
     })
 
 }).catch(err => console.log('rejected', err.message))
+
 
 //fillter search
 
