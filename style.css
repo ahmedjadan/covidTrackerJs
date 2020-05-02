@@ -4,7 +4,7 @@
 
 body, html {
     font-family: 'Almarai', sans-serif;
-    background: #eee;
+    background: #fafafa;
 
 }
 
@@ -74,7 +74,7 @@ td,th {
 
 input {
     text-align: center;
-    background-color: rgb(255, 255, 255) !important;
+    background-color: #fff !important;
     box-shadow:  none !important;
     border: none !important;
     font-family: 'Almarai', sans-serif;

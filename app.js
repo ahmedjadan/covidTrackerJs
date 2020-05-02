@@ -13,9 +13,9 @@ yemenData().then((data) => {
   const { cases, todayDeaths, todayCases, recovered, deaths, active, critical, tests, countryInfo } = data;
   
   
-  // let img = document.createElement('img');
-  // img.src = countryInfo.flag;
-  // document.getElementById('yemenFlag').append(img);
+  let img = document.createElement('img');
+  img.src = countryInfo.flag;
+  document.getElementById('yemenFlag').append(img);
 
   document.getElementById('cases_Y').innerHTML = cases.toLocaleString();
   document.getElementById('newCases_Y').innerHTML = todayCases + " +";
