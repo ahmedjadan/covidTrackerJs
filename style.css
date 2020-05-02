@@ -4,7 +4,6 @@
 
 body, html {
     font-family: 'Almarai', sans-serif;
-    background: #fafafa;
 
 }
 
@@ -28,17 +27,19 @@ body, html {
     font-size: 1.5rem !important;
     border-radius: 0;
     text-align: center;
+    background-color: #504f4f !important;
+
 }
 td,th {
     border: 1px dotted rgba(201, 198, 198, 0.7) !important;
 }
 
-
-
-.thehead:hover{
- background-color: #b6b7bd !important;
-
+thead {
+    background-color: #504f4f;
+    color: #eee;
 }
+
+
 
 .deaths, .recovered, .newDeaths, .newcases, .cases, .country, .critical , .tests {
     padding: 10px 10px !important;
@@ -74,8 +75,7 @@ td,th {
 
 input {
     text-align: center;
-    background-color: #fff !important;
-    box-shadow:  none !important;
+    background-color: #fafafa !important;
     border: none !important;
     font-family: 'Almarai', sans-serif;
 
@@ -86,16 +86,16 @@ input {
     display: none;
 }
 
-#todayCases {
+#todayCases, #todayDeaths{
     direction: rtl;
 }
 #yemenFlag img {
     width: 55px ;
 }
 
-table {
+/* table {
     background: #fff;
-}
+} */
 /* hr {
     border: 0;
     background-color: #eee;
