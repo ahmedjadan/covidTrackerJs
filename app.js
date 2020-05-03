@@ -22,9 +22,6 @@ yemenData().then((data) => {
   if(todayCases) {
     document.getElementById('newCases_Y').innerHTML = todayCases + " +";
 
-  }else {
-    document.getElementById('newCases_Y').innerHTML = todayCases ;
-
   }
   document.getElementById('recovered_Y').innerHTML = recovered;
   document.getElementById('totalDeaths_Y').innerHTML = deaths;
@@ -59,17 +56,11 @@ getCovidData()
         document.getElementById('recovered').innerHTML = recovered.toLocaleString();
         if(todayCases){
           document.getElementById('todayCases').innerHTML = todayCases.toLocaleString() + "+";
-        } else {
-          document.getElementById('todayCases').innerHTML = todayCases.toLocaleString();
-
-        }
+        } 
         if(todayDeaths) {
           document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString() + "+";
 
-        } else {
-          document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString() ;
-
-        }
+        } 
 
 
           const date = new Date(parseInt(updated));
@@ -102,7 +93,7 @@ fetch(API_2).then(( response ) => {
               if(country.todayCases){
                 countryLists += `<td class="newcases newWithBackroung"> +` + country.todayCases.toLocaleString() + "</td>";
               }else {
-                countryLists += `<td class="newcases"> ` + country.todayCases.toLocaleString() + "</td>";
+                countryLists += `<td class="newcases"> `  + "</td>";
               }
 
               countryLists += `<td class="deaths">` + country.deaths.toLocaleString() + "</td>";
@@ -110,7 +101,7 @@ fetch(API_2).then(( response ) => {
                 if(country.todayDeaths){
                   countryLists += `<td class="newDeaths newDeathWithBackground"> +` + country.todayDeaths.toLocaleString() + "</td>";
                 } else {
-                  countryLists += `<td class="newDeaths"> ` + country.todayDeaths.toLocaleString() + "</td>";
+                  countryLists += `<td class="newDeaths"> ` + "</td>";
                 }
                 countryLists += `<td class="recovered">` + country.recovered.toLocaleString() + "</td>";
                 countryLists += `<td class="critical">` + country.critical.toLocaleString()+ "</td>";
