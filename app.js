@@ -18,7 +18,14 @@ yemenData().then((data) => {
   document.getElementById('yemenFlag').append(img);
 
   document.getElementById('cases_Y').innerHTML = cases.toLocaleString();
-  document.getElementById('newCases_Y').innerHTML = todayCases + " +";
+
+  if(todayCases) {
+    document.getElementById('newCases_Y').innerHTML = todayCases + " +";
+
+  }else {
+    document.getElementById('newCases_Y').innerHTML = todayCases ;
+
+  }
   document.getElementById('recovered_Y').innerHTML = recovered;
   document.getElementById('totalDeaths_Y').innerHTML = deaths;
   // document.getElementById('tests').innerHTML = tests.toLocaleString();
@@ -50,8 +57,19 @@ getCovidData()
         document.getElementById('cases').innerHTML = cases.toLocaleString() ;
         document.getElementById('deaths').innerHTML = deaths.toLocaleString();
         document.getElementById('recovered').innerHTML = recovered.toLocaleString();
-        document.getElementById('todayCases').innerHTML = todayCases.toLocaleString() + "+";
-        document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString() + "+";
+        if(todayCases){
+          document.getElementById('todayCases').innerHTML = todayCases.toLocaleString() + "+";
+        } else {
+          document.getElementById('todayCases').innerHTML = todayCases.toLocaleString();
+
+        }
+        if(todayDeaths) {
+          document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString() + "+";
+
+        } else {
+          document.getElementById('todayDeaths').innerHTML = todayDeaths.toLocaleString() ;
+
+        }
 
 
           const date = new Date(parseInt(updated));
