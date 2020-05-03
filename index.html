@@ -9,14 +9,14 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="fonts/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="cards.css">
     <title>Covid-19 Tracker</title>
 
 </head>
-
 <body>
     <div class="container">
         <h3 class="center grey-text title">فيروس كورونا - كوفيد-19</h3>
@@ -25,27 +25,28 @@
             <div class="row main-cards">
                 <div class="col s12 l7 m7 global">
                         <div class="col s12">
+                           <div class="center grey-text">  <i class="fas fa-globe"></i> </div>
                             <h4 class="grey-text center">مؤكدة</h4>
                             <h3 id="cases" class="indigo-text center"></h3>
                         </div>
                         <div class="row">
                                 <div class="col s6 l3 center ">
-                                    <h6>وفيات</h6>
+                                    <h5>وفيات</h5>
                                     <h5 id="deaths"></h5>
                                     <span id="deathPercentage"></span>
                                 </div>
                                 <div class="col s6 l3  center">
-                                    <h6>تعافي</h6>
+                                    <h5>تعافي</h5>
                                     <h5 id="recovered" class="green-text"></h5>
                                     <span id="recoveredPercentage"></span>
                                 </div>
                                 <div class="col s6 l3 center">
-                                    <h6>وفيات جديدة</h6>
+                                    <h5>وفيات جديدة</h5>
                                     <h5 id="todayDeaths" class="red-text"></h5>
                                 </div>
                               
                                 <div class="col s6 l3 center">
-                                    <h6>جديدة</h6>
+                                    <h5>جديدة</h5>
                                     <h5 id="todayCases"></h5>
                                 </div>
                         </div>
@@ -55,25 +56,26 @@
                 <div class="col s12 l5 m5 yemenData">
                     <div class="col s12">
                          <p class="center-align"> <span id="yemenFlag" class="center"></span>  </p>
-                        <h3 id="cases_Y" class="indigo-text center"></h3>
+                         <h4 class="grey-text center">مؤكدة</h4>
+                         <h3 id="cases_Y" class="indigo-text center"></h3>
                     </div>
                     <div class="row">
                         <div class="col s6 l4 center ">
-                            <h6>وفيات</h6>
-                            <h5 id="totalDeaths_Y"></h5>
+                            <h5>وفيات</h5>
+                            <h4 id="totalDeaths_Y"></h4>
                             <span id="deathPercentageYemen"></span>
 
                         </div>
                         
                         <div class="col s6 l4 center ">
-                            <h6 class="">تعافي</h6>
-                            <h5 id="recovered_Y"></h5>
+                            <h5 class="">تعافي</h5>
+                            <h4 id="recovered_Y"></h4>
                             <span id="recoveredPercentageYemen"></span>
                         </div>
                         
                         <div class="col s6 l4 center ">
-                            <h6>حالات جديدة</h6>
-                            <h5 id="newCases_Y"></h5>
+                            <h5>حالات جديدة</h5>
+                            <h4 id="newCases_Y"></h4>
                         </div>
                         
                         

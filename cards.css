@@ -5,7 +5,7 @@
     color: rgb(255, 255, 255);
 }
 .global {
-    border-right: 1px dotted rgb(255, 255, 255);   
+    border-right: 1px dotted rgb(255, 255, 255);  
     
 }
 .global .s6 {
@@ -20,12 +20,19 @@
 .main-cards {
     padding: 0px !important ;
     margin: 0;
-    background-color: rgb(243, 243, 236);
-
+    background-color: #eee;
 }
 .yemenData {
-    background: #eee;
     color: rgb(87, 86, 86);
+    background-color: #e4e4e4;
+}
+i.fas {
+    font-size: 3rem;
+    padding: 16px 0;
+}
+h4 {
+    padding: 0;
+    margin: 0;
 }
 
 @media screen and (max-width: 990px) {
